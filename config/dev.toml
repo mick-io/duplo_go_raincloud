@@ -1,0 +1,14 @@
+[database]
+# host = "postgres"
+host = "localhost"
+name = "pg_duplo_go_raincloud"
+password = "password123"
+port = 5432
+user = "mick"
+
+[server]
+environment = "development"
+port = 4000
+
+[api]
+forecast_api_base_url = "https://api.open-meteo.com/v1/"

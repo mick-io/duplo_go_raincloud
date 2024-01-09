@@ -1,0 +1,21 @@
+# EditorConfig is awesome: https://EditorConfig.org
+
+# Top-most EditorConfig file
+root = true
+
+# Go files
+[*.go]
+indent_style = tab
+indent_size = 4
+end_of_line = lf
+charset = utf-8
+trim_trailing_whitespace = true
+insert_final_newline = true
+
+# Exclude vendor directory
+[**/vendor/**]
+exclude_patterns = vendor/**
+
+# Exclude generated files
+[**/gen/**]
+exclude_patterns = gen/**
