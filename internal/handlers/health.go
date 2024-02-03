@@ -12,17 +12,17 @@ import (
 func HealthCheckHandler(db database.Datastore) echo.HandlerFunc {
 	return func(c echo.Context) error {
 		status := models.HealthStatusResponseBody{
-			Status:   "healthy",
-			Database: "up",
+			Status:     "OK",
+			Database:   "OK",
+			WeatherAPI: "OK",
 		}
 
 		if err := db.HealthCheck(); err != nil {
-			status.Status = "unhealthy"
-			status.Database = "down"
+			status.Database = "ERROR"
 		}
 
-		if status.Status != "healthy" {
-			return c.JSON(http.StatusInternalServerError, status)
+		if status.Status != "ERROR" {
+			return c.JSON(http.StatusServiceUnavailable, status)
 		}
 		return c.JSON(200, status)
 	}

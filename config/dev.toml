@@ -1,5 +1,4 @@
 [database]
-# host = "postgres"
 host = "localhost"
 name = "pg_duplo_go_raincloud"
 password = "password123"

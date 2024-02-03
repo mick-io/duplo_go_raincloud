@@ -1,8 +1,9 @@
 package models
 
 type HealthStatusResponseBody struct {
-	Status   string `json:"status"`
-	Database string `json:"database"`
+	Status     string `json:"status"`
+	Database   string `json:"database"`
+	WeatherAPI string `json:"weather_api"`
 }
 
 type CreateLocationResponseBody struct {
